@@ -1,0 +1,173 @@
+/* General Reset and Base Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 90%; /* Make sure it fits within mobile screens */
+    max-width: 500px; /* Limits the width on larger screens */
+}
+
+/* Weather Card */
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Use the entire width available */
+    max-width: 450px; /* Limit max width for larger screens */
+}
+
+/* Hover Effect */
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+/* Input Field */
+#city-input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%; /* Flexible width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+#city-input::placeholder {
+    color: #aaa;
+}
+
+/* Button */
+#city-input-btn {
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#city-input-btn:hover {
+    background-color: #1565C0;
+}
+
+/* Weather Information - Initially Hidden */
+#weather-info {
+    display: none;
+}
+
+/* Weather Icon */
+#weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Temperature and Other Information */
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+#description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#wind-speed {
+    font-size: 16px;
+    color: rgb(255, 0, 0);
+}
+
+#date {
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+
+/* RESPONSIVE STYLES */
+
+/* Small Screens (Phones) */
+@media (max-width: 600px) {
+    .weather-card {
+        padding: 15px;
+    }
+    
+    #city-input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    #city-input-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    #temperature {
+        font-size: 22px;
+    }
+    
+    #description, #wind-speed, #date {
+        font-size: 14px;
+    }
+    
+    #weather-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .weather-card {
+        padding: 20px;
+    }
+    
+    #city-input {
+        padding: 14px;
+        font-size: 15px;
+    }
+    
+    #city-input-btn {
+        padding: 9px;
+        font-size: 15px;
+    }
+    
+    #temperature {
+        font-size: 23px;
+    }
+    
+    #description, #wind-speed, #date {
+        font-size: 16px;
+    }
+    
+    #weather-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 993px) {
+    .container {
+        max-width: 600px; /* Expand slightly for larger screens */
+    }
+    
+    .weather-card {
+        max-width: 500px;
+    }
+}
